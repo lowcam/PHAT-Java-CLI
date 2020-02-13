@@ -2,7 +2,7 @@
 #-------------------------------------------------------------------------------
 # PHAT  - Password Hashing Algorithm Tool
 # CLI Java Version
-# v 0.3
+# v 0.4
 #
 # The purpose of this tool is to let an individual enter text and have a hashed
 # output to use as the password to the site or program. Initially the program
@@ -40,6 +40,9 @@ import java.util.Base64;
 import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.awt.datatransfer.StringSelection;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
 
 public class PHATJavaCLI {
 
@@ -146,8 +149,6 @@ public static final char[] ALPHABET = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefgh
 	}
 
 	public static void main(String[] args){
-		//String someString = "This is some string!";
-		//System.out.println(getHash(someString.getBytes(), "SHA-256"));
 	   System.out.println ("");
 	   System.out.println ("PHAT Copyright (C) 2020 Lorne Cammack");
 	   System.out.println ("This program comes with ABSOLUTELY NO WARRANTY;");
@@ -165,18 +166,15 @@ public static final char[] ALPHABET = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefgh
        String hashBits = input.next();
        
        if (hashBits.equals("256")){
-	//System.out.println(getHash(inputText.getBytes(), "SHA-256"));
-        hashBitSend = "SHA-256";
+	    hashBitSend = "SHA-256";
         loopCounter = 1;
        }
        else if (hashBits.equals("384")){
-	//System.out.println(getHash(inputText.getBytes(), "SHA-384"));
-        hashBitSend = "SHA-384";
+	    hashBitSend = "SHA-384";
         loopCounter = 1;
        }
        else if (hashBits.equals("512")){
-	//System.out.println(getHash(inputText.getBytes(), "SHA-512"));
-        hashBitSend = "SHA-512";
+	    hashBitSend = "SHA-512";
         loopCounter = 1;
        }
        else{
@@ -242,15 +240,9 @@ public static final char[] ALPHABET = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefgh
 	}
        }
        System.out.println(TextOut);
-       /**if(a.equals("yes")){
-           System.out.println("true");
-       }
-       else if (a.equals("no")){
-           System.out.println("nope your stupid");
-       }
-       else{
-           System.out.println("this is what it is returning instead of using the if or elseif statement " + a);
-    }*/
+	   StringSelection clipText = new StringSelection(TextOut);
+	   Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+	   clipboard.setContents(clipText, null);
 	}
 
 }
