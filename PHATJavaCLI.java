@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class HashCalcQs {
+public class PHATJavaCLI {
 
 //The following section, until noted, is part of https://www.javatips.net/api/bitcoinj-master/core/src/main/java/org/bitcoinj/core/Base58.java
 /**
