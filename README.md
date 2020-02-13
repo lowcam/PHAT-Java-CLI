@@ -13,7 +13,7 @@ will be selectable in case a site can only have a certain number of digits
 in a password. The last step will be for the output to be copied to the
 clipboard so if can be pasted into the program or site.
 
-Required to use:
+Used openjdk-13.0.2 for compilation.
 
 
 (C) 2020 Lorne Cammack, USA
