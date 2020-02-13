@@ -2,7 +2,7 @@
 #-------------------------------------------------------------------------------
 # PHAT  - Password Hashing Algorithm Tool
 # CLI Java Version
-# v 0.2
+# v 0.3
 #
 # The purpose of this tool is to let an individual enter text and have a hashed
 # output to use as the password to the site or program. Initially the program
@@ -148,6 +148,12 @@ public static final char[] ALPHABET = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefgh
 	public static void main(String[] args){
 		//String someString = "This is some string!";
 		//System.out.println(getHash(someString.getBytes(), "SHA-256"));
+	   System.out.println ("");
+	   System.out.println ("PHAT Copyright (C) 2020 Lorne Cammack");
+	   System.out.println ("This program comes with ABSOLUTELY NO WARRANTY;");
+	   System.out.println ("This is free software, and you are welcome to redistribute it");
+	   System.out.println ("under certain conditions. See https://www.gnu.org/licenses/ for more details.");
+	   System.out.println ("");
        Scanner input = new Scanner(System.in);
        String hashBitSend = "";
        String numSysIn = "";
