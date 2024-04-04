@@ -2,7 +2,7 @@
 #-------------------------------------------------------------------------------
 # PHAT  - Password Hashing Algorithm Tool
 # CLI Java Version
-# v 1.0
+# v 1.1
 #
 # The purpose of this tool is to let an individual enter text and have a hashed
 # output to use as the password to the site or program. Initially the program
@@ -14,9 +14,9 @@
 # in a password. THe last step will be for the output to be copied to the
 # clipboard so if can be pasted into the program or site.
 #
-# This was compiled with openjdk-13.0.2.
+# This was compiled with openjdk-17.
 #
-# (C) 2020 Lorne Cammack, USA
+# (C) 2024 Lorne Cammack, USA
 # email lowcam.socailvideo@gmail.com
 # Released under GNU Public License (GPL) v3
 #    This program is free software: you can redistribute it and/or modify
@@ -150,12 +150,13 @@ public static final char[] ALPHABET = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefgh
 
 	public static void main(String[] args){
 	   System.out.println ("");
-	   System.out.println ("PHAT Copyright (C) 2020 Lorne Cammack");
+	   System.out.println ("PHAT Copyright (C) 2024 Lorne Cammack");
 	   System.out.println ("This program comes with ABSOLUTELY NO WARRANTY;");
 	   System.out.println ("This is free software, and you are welcome to redistribute it");
 	   System.out.println ("under certain conditions. See https://www.gnu.org/licenses/ for more details.");
 	   System.out.println ("");
        Scanner input = new Scanner(System.in);
+       try {
        String hashBitSend = "";
        String numSysIn = "";
        System.out.println("Input Text:");
@@ -243,6 +244,9 @@ public static final char[] ALPHABET = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefgh
 	   StringSelection clipText = new StringSelection(TextOut);
 	   Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 	   clipboard.setContents(clipText, null);
-	}
+	} finally {
+        input.close();
+    }
+    }
 
 }
