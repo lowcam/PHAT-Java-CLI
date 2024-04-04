@@ -1,7 +1,7 @@
 
 PHAT  - Password Hashing Algorithm Tool
 CLI Java Version
-v 1.0
+v 1.1
 
 The purpose of this tool is to let an individual enter text and have a hashed
 output to use as the password to the site or program. Initially the program
@@ -13,10 +13,16 @@ will be selectable in case a site can only have a certain number of digits
 in a password. The last step will be for the output to be copied to the
 clipboard so if can be pasted into the program or site.
 
-Used openjdk-1.8.0_252 for compilation.
+Used openjdk-17 for compilation.
+
+To compile the PHATJavaCLI.java file I did the following:
+to get the PHATJavaCLI.class file:
+javac PHATJavaCLI.java
+to get the PHATJavaCLI.jar file:
+jar -cmvf META-INF/MANIFEST.MF PHATJavaCLI.jar PHATJavaCLI.class
 
 
-(C) 2020 Lorne Cammack, USA
+(C) 2024 Lorne Cammack, USA
 Released under GNU Public License (GPL)
 email lowcam.socailvideo@gmail.com
 

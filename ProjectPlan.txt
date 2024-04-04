@@ -1,1 +1,9 @@
 This is the project plan for the Password Hash Calc in Java CLI.
+- See about upgrading SHA calculations to SHA3.
+-- Need to research if SHA3 has beem implemented in java. 
+-- https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/security/MessageDigest.html
+-- https://docs.oracle.com/en/java/javase/17/docs/specs/security/standard-names.html#messagedigest-algorithms
+-- According to the above documentation it is available and I can use it as I use java.security.MessageDigest
+--- Probably need to think about having it as an option, do you want to use
+--- sha2 or sha3? That way if any pw are using sha2 can still get those hashes to match.
+--- sha3 will produce a totally different hash from sha2.
